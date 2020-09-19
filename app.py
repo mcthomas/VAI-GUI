@@ -35,6 +35,14 @@ def email():
     final, sender = receive()
     return render_template("e-mail.html", final=final, sender=sender, length=len(final))
 
+@app.route('/esend', methods = ['POST', 'GET'])
+def esend():
+    if request.method == 'POST':
+      result = request.form
+      print(request.form['messg'])
+      send(request.form['rcvr'],request.form['messg'])
+      return render_template("e-send.html", flag=1)
+    return render_template("e-send.html", flag=0)
 
 #appliances
 @app.route('/anavigation')
