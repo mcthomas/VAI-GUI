@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <title>VAI</title>
+</head>
+<body style="background-color:#44535e; overflow-x:hidden">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href={{ url_for('index') }}>VAI</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href={{ url_for('index') }}>Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <br><br>
+    <center>
+      <p class="lead" style="font-size:30px; color: #fff">
+        Compose ~ VAI
+      </p>
+    </center>
+    <br><br>
+
+    <div class="container" style="padding-left:4%;padding-right:4%;width:50%; height:450px;background-color:#f0ebdf;overflow-y:scroll; overflow-x:hidden">
+      <form action="http://127.0.0.1:5000/esend" method="POST">
+        <br>
+        <br>
+        <br>
+        <div class="form-row align-items-center">
+            <label class="mr-sm-2" for="inlineFormCustomSelect">Message you'd like to send : </label>
+            <select class="custom-select mr-sm-2" name="messg" id="inlineFormCustomSelect">
+              <option value="Could you please come home?">Could you please come home</option>
+              <option value="Take me to the pharmacy whenever you are free">Take me to the pharmacy whenever you are free</option>
+              <option value="Please bring home some pizza!">Please bring home some pizza!</option>
+              <option value="I don't feel well">I don't feel well</option>
+              <option value="I have run out of groceries">I have run out of groceries</option>
+              <option value="Could you send the plumber">Could you send the plumber</option>
+              <option value="Book an appointment for me at the dentists">Book an appointment for me at the dentists</option>
+              <option value="Take me to the community center">Take me to the community center</option>
+
+              <option value="Lets go out for dinner today">Lets go out for dinner today</option>
+            </select>
+          <br>
+          <br>
+          <div class="col-auto my-1">
+            <label class="mr-sm-2" for="inlineFormCustomSelect"> Receiver address </label>
+            <select name="rcvr" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+              <option value="ipshitamjoshi@gmail.com">Ipshita</option>
+              <option value="1">Gokulraj</option>
+              <option value="2">Matt</option>
+            </select>
+            <br>
+            <br>
+            <br>
+
+            <button type="submit" class="btn btn-primary" style="margin-bottom:10px">Submit</button>
+            <br>
+            <br>
+            <br>
+            <br>
+            {% if flag==1: %}
+              <h5>Message Sent!</h5>
+            {% endif %}
+
+          </div>
+        </div>
+      </form>
+
+
+    </div>
+
+    <br>
+
+
+    <div class="float-md-right" style="margin-right:20px">
+      <a href={{ url_for('email') }}>
+        <button type="button" class="btn btn-primary" style="background-color:#f0ebdf; color:#000">Back to INBOX</button>
+      </a>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>
