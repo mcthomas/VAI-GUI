@@ -1,4 +1,4 @@
-<img src="web/style/images/favicon.png" width="300"/>
+<img src="static/temp.png" width="300"/>
 
 # V.A.I. - Visual Aided Interface
 
