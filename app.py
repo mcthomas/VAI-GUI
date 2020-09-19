@@ -32,8 +32,8 @@ def ggame():
 #essentials
 @app.route('/email')
 def email():
-
-    return render_template("e-mail.html")
+    final, sender = receive()
+    return render_template("e-mail.html", final=final, sender=sender, length=len(final))
 
 
 #appliances

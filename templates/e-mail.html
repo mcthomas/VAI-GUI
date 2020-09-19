@@ -45,22 +45,26 @@
           </tr>
         </thead>
         <tbody>
+          {% for i in range(length) %}
+
           <tr>
-            <td>john@example.com</td>
-            <td>Check oksnskgjnkdjgnkjdngksdnglskndgggmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm</td>
+            <td>{{ sender }}</td>
+            <td>{{ final[i] }}</td>
           </tr>
-          <tr>
-            <td>John</td>
-            <td>john@example.com</td>
-          </tr>
+          {% endfor %}
 
         </tbody>
       </table>
     </div>
-
+    <br>
+    <div class="float-md-right" style="margin-right:20px">
+      <a href="#">
+        <button type="button" class="btn btn-primary" data-toggle="modal" style="background-color:#f0ebdf; color:#000" data-target=".demo-popup">SEND MESSAGE</button>
+      </a>
+    </div><br>
 
     <br>
-    <br>
+
 
 
 

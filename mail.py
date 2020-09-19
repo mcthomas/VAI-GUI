@@ -51,7 +51,8 @@ def receive():
     con.select('Inbox')
 
     # Fetching emails from user
-    msgs = get_emails(search('FROM', 'ipshitamjoshi@gmail.com', con))
+    sender = 'ipshitamjoshi@gmail.com'
+    msgs = get_emails(search('FROM', sender, con))
 
 
     # Finding the required content from our msgs
@@ -80,3 +81,5 @@ def receive():
 
                 except UnicodeEncodeError as e:
                     pass
+
+    return final, sender
