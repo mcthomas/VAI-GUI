@@ -4,7 +4,6 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-
     return render_template("index.html")
 
 @app.route('/appliances')
@@ -14,6 +13,10 @@ def appliances():
 @app.route('/essentials')
 def essentials():
     return render_template("essentials.html")
+
+@app.route('/entertainment')
+def entertainment():
+    return render_template("entertainment.html")
 
 @app.route('/email')
 def email():
