@@ -1,0 +1,5 @@
+- organize file structure and style guide for existing outline
+
+- aggregate assets w/ bootstrap or otherwise
+
+- implement w/ GUI elements
