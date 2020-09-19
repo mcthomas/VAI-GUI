@@ -62,6 +62,15 @@ def anavigation():
 def aautomation():
     return render_template("a-automation.html")
 
+#SOS
+@app.route('/ssmoke')
+def ssmoke():
+    return render_template("s-smoke.html")
+
+@app.route('/sfall')
+def sfall():
+    return render_template("s-fall.html")
+
 
 if __name__ == '__main__':
     app.run(debug=True)
