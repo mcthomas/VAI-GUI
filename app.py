@@ -1,4 +1,5 @@
 from flask import Flask, request, render_template, render_template_string
+from mail import send, receive
 app = Flask(__name__)
 
 
@@ -31,6 +32,7 @@ def ggame():
 #essentials
 @app.route('/email')
 def email():
+
     return render_template("e-mail.html")
 
 
