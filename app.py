@@ -27,6 +27,10 @@ def gdino():
 @app.route('/gchess')
 def gchess():
     return render_template("g-chess.html")
+    
+@app.route('/gmines')
+def gmines():
+    return render_template("g-mines.html")
 
 
 #essentials
