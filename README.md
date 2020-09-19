@@ -1,4 +1,4 @@
-<img src="static/temp.png" width="300"/>
+<img src="static/temp.PNG" width="300"/>
 
 # V.A.I. - Visual Aided Interface
 
