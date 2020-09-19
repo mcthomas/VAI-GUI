@@ -12,7 +12,7 @@
 </head>
 <body style="background-color:#44535e; overflow-x:hidden">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href={{ url_for('index') }}>VAI</a>
+      <a class="navbar-brand">VAI</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -31,7 +31,7 @@
     <br><br>
     <center>
       <p class="lead" style="font-size:30px; color: #fff">
-        Visual Aid Assist ~ VAI
+        SOS
       </p>
     </center>
     <br><br>
@@ -42,11 +42,11 @@
 
       <div class="col-sm-4">
         <center>
-          <a href={{ url_for('appliances') }}>
+          <a href={{ url_for('email') }}>
             <div class="card" style="width: 18rem;">
               <img class="card-img-top" height="110px" src="{{ url_for('static', filename='temp.png') }}" alt="Card image cap">
               <div class="card-body">
-                <p class="card-text">Appliances</p>
+                <p class="card-text">Call/Message</p>
               </div>
             </div>
           </a>
@@ -55,11 +55,11 @@
 
       <div class="col-sm-4">
         <center>
-          <a href={{ url_for('essentials') }}>
+          <a href={{ url_for('index') }}>
             <div class="card" style="width: 18rem;">
               <img class="card-img-top" height="110px" src="{{ url_for('static', filename='temp.png') }}" alt="Card image cap">
               <div class="card-body">
-                <p class="card-text">Essentials</p>
+                <p class="card-text">Smoke Detection</p>
               </div>
             </div>
           </a>
@@ -75,11 +75,11 @@
 
       <div class="col-sm-4">
         <center>
-          <a href={{ url_for('entertainment') }}>
+          <a href={{ url_for('index') }}>
             <div class="card" style="width: 18rem;">
               <img class="card-img-top" height="110px" src="{{ url_for('static', filename='temp.png') }}" alt="Card image cap">
               <div class="card-body">
-                <p class="card-text">Entertainment</p>
+                <p class="card-text">Fall Detection</p>
               </div>
             </div>
           </a>
@@ -89,11 +89,11 @@
 
       <div class="col-sm-4">
         <center>
-          <a href={{ url_for('sos') }}>
+          <a href={{ url_for('index') }}>
             <div class="card" style="width: 18rem;">
               <img class="card-img-top" height="110px"  src="{{ url_for('static', filename='temp.png') }}" alt="Card image cap">
               <div class="card-body">
-                <p class="card-text">SOS</p>
+                <p class="card-text">Back to HOME</p>
               </div>
             </div>
           </a>

@@ -19,6 +19,10 @@ def essentials():
 def entertainment():
     return render_template("entertainment.html")
 
+@app.route('/sos')
+def sos():
+    return render_template("sos.html")
+
 #entertainment
 @app.route('/gdino')
 def gdino():
@@ -27,7 +31,7 @@ def gdino():
 @app.route('/gchess')
 def gchess():
     return render_template("g-chess.html")
-    
+
 @app.route('/gmines')
 def gmines():
     return render_template("g-mines.html")
