@@ -24,9 +24,9 @@ def entertainment():
 def gdino():
     return render_template("g-dino.html")
 
-@app.route('/ggame')
-def ggame():
-    return render_template("g-game.html")
+@app.route('/gchess')
+def gchess():
+    return render_template("g-chess.html")
 
 
 #essentials
