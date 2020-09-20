@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <title>VAI</title>
+</head>
+<body style="background-color:#44535e; overflow-x:hidden">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand">VAI</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href={{ url_for('index') }}>Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <br><br>
+    <center>
+      <p class="lead" style="font-size:30px; color: #fff">
+        Book your ride with Ola ~ VAI
+      </p>
+    </center>
+    <br><br>
+
+    <div class="container align-items-center" style="padding-left:9%;padding-right:4%;width:40%; height:450px;background-color:#f0ebdf;overflow-y:scroll; overflow-x:hidden">
+      <br>
+      <br>
+      <br>
+
+      <form action="http://127.0.0.1:5000/eola" method="POST">
+        <table border = "0">
+            <tr>
+              <td>Date: &nbsp;  &nbsp; </td>
+              <td><input type="date" id="date" value = "2020-09-20" name="date1"></td>
+           </tr>
+
+           <tr><td> &nbsp; </td><td></td></tr> <!-- lmao -->
+
+           <tr>
+              <td>Time:</td>
+              <td> <select name="hour" class="custom-select mr-sm-1" style="width:60px" id="inlineFormCustomSelect">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11" selected>11</option>
+                <option value="12">12</option>
+              </select>
+
+              :
+              <select name="minutes" class="custom-select mr-sm-1" style="width:60px" id="inlineFormCustomSelect">
+                <option value="00">00</option>
+                <option value="15">15</option>
+                <option value="30">30</option>
+                <option value="45">45</option>
+              </select>
+
+              :
+              <select name="time" class="custom-select mr-sm-1" style="width:80px" id="inlineFormCustomSelect">
+                <option value="AM">AM</option>
+                <option value="PM">PM</option>
+              </select>
+
+
+            </td>
+
+              <!-- time input couldnt work with tab and enter keys -->
+
+           </tr>
+
+          <tr><td> &nbsp; </td><td></td></tr>
+          <tr><td> &nbsp; </td><td></td></tr>
+           <tr>
+              <td colspan="2">Where would you like to go?</td>
+           </tr>
+           <tr>
+              <td colspan="2">
+
+                  <select class="custom-select mr-sm-2" name="location" id="inlineFormCustomSelect">
+                  <option value="402 Eve Street near Times Plaza">402 Eve Street near Times Plaza</option>
+                  <option value="Target">Target</option>
+                  <option value="McDonalds">McDonalds</option>
+                  <option value="Mayo Clinic">Mayo Clinic</option>
+                  <option value="Pharmacy">Pharmacy</option>
+                  <option value="I have run out of groceries">Community center</option>
+                </select>
+
+              </td>
+           </tr>
+        </table>
+
+        <br>
+        <br>
+
+        <button type="submit" class="btn btn-primary" style="margin-bottom:10px">Submit</button>
+        <br>
+        {% if flag==1: %}
+          <h5>Cab booked!</h5>
+        {% endif %}
+
+
+
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>

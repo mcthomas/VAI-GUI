@@ -52,11 +52,22 @@ def email():
     final, sender = receive()
     return render_template("e-mail.html", final=final, sender=sender, length=len(final))
 
+@app.route('/eola', methods = ['POST', 'GET'])
+def eola():
+    if request.method == 'POST':
+      result = request.form
+      message = "Hi, I'd like to book a cab for " + request.form['date1'] + " at " \
+      + request.form['hour'] + ":" + request.form['minutes'] + request.form['time'] \
+      + " to " + request.form['location'] + " - sent via VAI"
+      #print(message)
+      sms(msg=message)
+      return render_template("e-ola.html", flag=1)
+    return render_template("e-ola.html", flag=0)
+
 @app.route('/esend', methods = ['POST', 'GET'])
 def esend():
     if request.method == 'POST':
       result = request.form
-      print(request.form['messg'])
       send(request.form['rcvr'],request.form['messg'])
       return render_template("e-send.html", flag=1)
     return render_template("e-send.html", flag=0)
