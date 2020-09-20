@@ -1,7 +1,7 @@
 from flask import Flask, request, render_template, render_template_string
 from mail import send, receive
 from call import sms, dial
-
+from dominos import get_menu
 
 app = Flask(__name__)
 
@@ -52,6 +52,14 @@ def email():
     final, sender = receive()
     return render_template("e-mail.html", final=final, sender=sender, length=len(final))
 
+@app.route('/esend', methods = ['POST', 'GET'])
+def esend():
+    if request.method == 'POST':
+      result = request.form
+      send(request.form['rcvr'],request.form['messg'])
+      return render_template("e-send.html", flag=1)
+    return render_template("e-send.html", flag=0)
+
 @app.route('/eola', methods = ['POST', 'GET'])
 def eola():
     if request.method == 'POST':
@@ -64,13 +72,20 @@ def eola():
       return render_template("e-ola.html", flag=1)
     return render_template("e-ola.html", flag=0)
 
-@app.route('/esend', methods = ['POST', 'GET'])
-def esend():
+
+@app.route('/edominos', methods = ['POST', 'GET'])
+def edominos():
     if request.method == 'POST':
       result = request.form
-      send(request.form['rcvr'],request.form['messg'])
-      return render_template("e-send.html", flag=1)
-    return render_template("e-send.html", flag=0)
+      #print(message)
+      return render_template("e-dominos.html", flag=1)
+
+    coke, pizza = get_menu()
+    #coke, pizza = '0','0'
+    #coke = [['ABCD', 'Pizza1', 25], ['DEGD', 'PZaaf', 232], ['sfa', 'wawfwga', '22']]
+    return render_template("e-dominos.html", coke=coke, pizza=pizza, lenc=len(coke), lenp=len(pizza))
+
+
 
 #appliances
 @app.route('/anavigation')
