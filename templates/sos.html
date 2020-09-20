@@ -7,6 +7,11 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    {% if flag==1:  %}
+      <script>
+      alert('Primary caretaker contacted.');
+      </script>
+    {% endif %}
 
     <title>VAI</title>
 </head>
@@ -42,11 +47,11 @@
 
       <div class="col-sm-4">
         <center>
-          <a href="#" id="link" onclick="alert('Primary caretaker contacted.');">
+          <a href={{ url_for('sos2') }}>
             <div class="card" style="width: 18rem;">
               <img class="card-img-top" height="110px" src="{{ url_for('static', filename='temp.png') }}" alt="Card image cap">
               <div class="card-body">
-                <p class="card-text">Call/Message</p>
+                <p class="card-text">Emergency call</p>
               </div>
             </div>
           </a>

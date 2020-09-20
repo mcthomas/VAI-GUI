@@ -1,7 +1,9 @@
 from flask import Flask, request, render_template, render_template_string
 from mail import send, receive
-app = Flask(__name__)
+from call import sms, dial
 
+
+app = Flask(__name__)
 
 @app.route('/')
 def index():
@@ -21,7 +23,14 @@ def entertainment():
 
 @app.route('/sos')
 def sos():
-    return render_template("sos.html")
+    return render_template("sos.html", flag=0)
+
+#prolly a better way to do this but idc enough
+#was basically trying to get a python function to run and get back to same page with a popup
+@app.route('/sos2')
+def sos2():
+    dial()
+    return render_template("sos.html", flag=1)
 
 #entertainment
 @app.route('/gdino')
