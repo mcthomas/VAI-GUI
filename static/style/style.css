@@ -27,6 +27,9 @@ html{
     margin-bottom:40px;
     color:white;
 }
+#pizza{
+    background-image: url("images/pizza.jpg");
+}
 /*end:text*/
 
 /*begin:layout*/
@@ -34,7 +37,6 @@ body{
     margin:auto;
     text-align:center;
     background:linear-gradient(#3c3d3c, #1e1e1e);
-    padding
 }
 .framed{
     min-height:95%;
@@ -44,7 +46,6 @@ body{
 /*begin:elements*/
 .feed{
     margin-top: 12px;
-    margin-bottom: 40px;
     padding:50px;
 }
 .feedItem{
