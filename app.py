@@ -83,10 +83,10 @@ def edominos():
       pizza = result.getlist('pizza')
       return render_template("e-dominos.html", open=1, coke=coke, pizza=pizza, lenc=len(coke), lenp=len(pizza), flag=1)
 
-    open, coke, pizza = get_menu()
-    #coke, pizza, open = '0','0', 1
-    #coke = [['ABCD', 'Pizza1', 25], ['DEGD', 'PZaaf', 232], ['sfa', 'wawfwga', '22']]
-    #pizza = coke
+    #open, coke, pizza = get_menu()
+    coke, pizza, open = '0','0', 1
+    coke = [['ABCD', 'Pizza1', 25], ['DEGD', 'PZaaf', 232], ['sfa', 'wawfwga', '22']]
+    pizza = coke
     return render_template("e-dominos.html", open=open, coke=coke, pizza=pizza, lenc=len(coke), lenp=len(pizza), flag=0)
 
 
