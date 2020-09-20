@@ -18,9 +18,7 @@ html{
 #subtitle{
     font-size:30px;
     font-family:Menlo;
-    background: -webkit-linear-gradient(90deg, purple, green, blue);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    color:white;
     display:block;
     margin:auto;
     margin-top:20px;
