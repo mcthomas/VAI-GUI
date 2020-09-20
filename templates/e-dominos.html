@@ -46,24 +46,24 @@
     <br><br>
 
     <div class="container" style="padding-left:4%;padding-right:4%;width:45%; height:450px;background-color:#f0ebdf;overflow-y:scroll; overflow-x:hidden">
-      <form action="http://127.0.0.1:5000/esend" method="POST">
+      <form action="http://127.0.0.1:5000/edominos" method="POST">
         <br>
         <br>
         <br>
 
         <div class="form-row align-items-center">
-
+          {% if open==1: %}
           <table>
             <tr><th></th></tr>
             <tr><td>Select your pizza and sides!</td></tr>
             <tr><td>
-              <select class="selectpicker" multiple data-live-search="true">
+              <select class="selectpicker" name="pizza" multiple data-live-search="true">
                 {% for i in range(lenp) %}
-                <option >
+                <option value="{{ pizza[i][0] }}" >
                   {% for j in range(2) %}
-                    {{ pizza[i][j]}}
+                    {{ pizza[i][j] }}
                   {% endfor %}
-                    $ {{ pizza[2][j]}}
+                    ${{ pizza[i][2] }}
                 </option>
                 {% endfor %}
               </select>
@@ -73,13 +73,13 @@
 
               <tr><td>Select your drink!</td></tr>
               <tr><td>
-                <select class="selectpicker" multiple data-live-search="true">
+                <select class="selectpicker" name="coke" multiple data-live-search="true">
                   {% for i in range(lenc) %}
-                  <option >
+                  <option value="{{ coke[i][0] }}" >
                     {% for j in range(2) %}
-                      {{ coke[i][j]}}
+                      {{ coke[i][j] }}
                     {% endfor %}
-                    $ {{ coke[2][j]}}
+                    ${{ coke[i][2]}}
                   </option>
                   {% endfor %}
                 </select>
@@ -92,20 +92,28 @@
 
 
               </table>
+              {% endif %}
 
-          <br>
-          {% if flag==1: %}
-            <h5>Order placed!</h5>
-          {% endif %}
+              {% if open==0  %}
+              <center>
+                <h3>Oops. No local store is currently open. </h3>
+                </center>
+              {% endif %}
 
-        </div>
+              <br>
+
+
+            </div>
+            {% if flag==1: %}
+              <h5>Order placed!</h5>
+            {% endif %}
+          </div>
+
+        </form>
+
+
       </div>
-    </form>
-
-
-  </div>
-
-  <br>
+      <br>
 
 
     <div class="float-md-right" style="margin-right:20px">

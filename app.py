@@ -77,13 +77,19 @@ def eola():
 def edominos():
     if request.method == 'POST':
       result = request.form
+      print(result.getlist('coke'))
+      print(result.getlist('pizza'))
+      coke, pizza, open = '0','0', 1
+      coke = [['ABCD', 'Pizza1', 25], ['DEGD', 'PZaaf', 232], ['sfa', 'wawfwga', '22']]
+      pizza = coke
       #print(message)
-      return render_template("e-dominos.html", flag=1)
+      return render_template("e-dominos.html", open=1, coke=coke, pizza=pizza, lenc=len(coke), lenp=len(pizza), flag=1)
 
-    coke, pizza = get_menu()
-    #coke, pizza = '0','0'
-    #coke = [['ABCD', 'Pizza1', 25], ['DEGD', 'PZaaf', 232], ['sfa', 'wawfwga', '22']]
-    return render_template("e-dominos.html", coke=coke, pizza=pizza, lenc=len(coke), lenp=len(pizza))
+    #open, coke, pizza = get_menu()
+    coke, pizza, open = '0','0', 1
+    coke = [['ABCD', 'Pizza1', 25], ['DEGD', 'PZaaf', 232], ['sfa', 'wawfwga', '22']]
+    pizza = coke
+    return render_template("e-dominos.html", open=open, coke=coke, pizza=pizza, lenc=len(coke), lenp=len(pizza), flag=0)
 
 
 
