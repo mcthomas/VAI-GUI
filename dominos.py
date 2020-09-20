@@ -13,10 +13,6 @@ def get_menu():
 
 #order = Order.begin_customer_order(customer, my_local_dominos)
 #order.add_item('2LDCOKE')
-
 #order.remove_item('2LDCOKE')
-
 #card = CreditCard('00800123422343234', '7666', '777', '90210')
-
-
 #Credits : https://github.com/techwithtim/pizzapi

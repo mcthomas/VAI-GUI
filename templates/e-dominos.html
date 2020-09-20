@@ -59,7 +59,7 @@
             <tr><td>
               <select class="selectpicker" name="pizza" multiple data-live-search="true">
                 {% for i in range(lenp) %}
-                <option value="{{ pizza[i][0] }}" >
+                <option value="{{ pizza[i][1] }}" >
                   {% for j in range(2) %}
                     {{ pizza[i][j] }}
                   {% endfor %}
@@ -75,7 +75,7 @@
               <tr><td>
                 <select class="selectpicker" name="coke" multiple data-live-search="true">
                   {% for i in range(lenc) %}
-                  <option value="{{ coke[i][0] }}" >
+                  <option value="{{ coke[i][1] }}" >
                     {% for j in range(2) %}
                       {{ coke[i][j] }}
                     {% endfor %}
@@ -105,7 +105,15 @@
 
             </div>
             {% if flag==1: %}
-              <h5>Order placed!</h5>
+              <h5>Order placed for
+                    {{ pizza[0] }}
+                {% for i in range(1, lenp) %}
+                    , {{ pizza[i] }}
+                {% endfor %}
+                {% for i in range(lenc) %}
+                    , {{ coke[i] }}
+                {% endfor %}
+              </h5>
             {% endif %}
           </div>
 
