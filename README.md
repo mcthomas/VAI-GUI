@@ -32,3 +32,5 @@ $ python app.py
 ```
 
   #### Footage:
+
+<img src="demo.gif" width="500"/>
