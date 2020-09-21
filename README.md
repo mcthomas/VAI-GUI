@@ -2,8 +2,8 @@
 
 # V.A.I. - Visual Aided Interface | HackMIT 2020 
 
-### Backend - Robotics led by [Gokulraj K.S](mailto:gokulrajks@pesu.pes.edu)
-### Frontend - GUI and design led by [Matt Thomas](mailto:mcthomas4@wisc.edu) / API implementations led by [Ipshita Joshi](mailto:ipshitameghal.joshi2017@vitstudent.ac.in) 
+##### Backend - Robotics led by [Gokulraj K.S](mailto:gokulrajks@pesu.pes.edu)
+##### Frontend - GUI and design led by [Matt Thomas](mailto:mcthomas4@wisc.edu) / API implementations led by [Ipshita Joshi](mailto:ipshitameghal.joshi2017@vitstudent.ac.in) 
 
 ## Contents
 
