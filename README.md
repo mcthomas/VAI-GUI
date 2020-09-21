@@ -8,14 +8,21 @@
 ## Contents
 
   - [Introduction](#Introduction "Introduction")
-  - [GUI Server Dependencies](#GUI-Server-Dependencies "GUI Server Dependencies")
+  - [Additonal GUI Server Dependencies](#Additonal-GUI-Server-Dependencies "Additional GUI Server Dependencies")
   - [Usage](#Usage "Usage")
   
   ## Introduction
   
 In order to assist those who are restricted to wheelchairs or otherwise impaired by paralysis, we are aiming to assist their daily life through gesture controls, image processing, and voice command features.  Interfacing in this way allows the user to move between rooms, make emergency calls, and order food and transportation services.  This project serves as the frontend GUI aid for remotely controlling the simulated robotics, written in HTML, CSS, JS, and wrapped with Python via a [flask](https://github.com/pallets/flask) server.  Made for the HackMIT 2020 Health Tech.
   
-  ## GUI Server Dependencies
+  ## Additional GUI Server Dependencies
+  
+  ```
+$ pip install -U Flask
+$ pip install twilio
+$ pip install pizzaapy
+$ pip install xmltodict
+```
   
   ## Usage
 
@@ -24,4 +31,4 @@ Intended for use with eye blink tracking software such as [OpenCV](https://githu
 $ python app.py
 ```
 
-  ### Footage:
+  #### Footage:
