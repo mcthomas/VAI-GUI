@@ -13,7 +13,7 @@
   
   ## Introduction
   
-In order to assist those who are restricted to wheelchairs or otherwise impaired by paralysis, we are aiming to assist their daily life through gesture controls, image processing, and voice command features.  Interfacing in this way allows the user to move between rooms, make emergency calls, and order food and transportation services.  This project serves as the frontend GUI aid for remotely controlling the simulated robotics, written in HTML, CSS, JS, and wrapped with Python via a [flask](https://github.com/pallets/flask) server.  Made for the HackMIT 2020 Health Tech.
+We are aiming to assist the daily lives of those who are restricted to wheelchairs or otherwise impaired by paralysis, through the use of gesture controls, image processing, and voice command features.  Interfacing in this way allows the user to move between rooms, make emergency calls, and order food and transportation services.  This project serves as the frontend GUI aid for remotely controlling the simulated robotics, written in HTML, CSS, JS, and wrapped with Python via a [flask](https://github.com/pallets/flask) server.  Made for the HackMIT 2020 Health Tech.
   
   ## Additional GUI Server Dependencies
   
