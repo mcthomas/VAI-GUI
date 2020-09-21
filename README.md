@@ -19,7 +19,7 @@ In order to assist those who are restricted to wheelchairs or otherwise impaired
   
   ## Usage
 
-Intended for use with eye blink tracking software such as [OpenCV](https://github.com/opencv/opencv) w/ [dlib](https://github.com/davisking/dlib), with simulated robotics via [gazebo](https://github.com/osrf/gazebo), [rviz](https://github.com/ros-visualization/rviz), [tinkercad](https://www.tinkercad.com), and [ROS packages](https://github.com/ros/ros).  It can be demoed (without the automated tabbing) with mouse clicks by simply cloning the project and running:
+Intended for use with eye blink tracking software such as [OpenCV](https://github.com/opencv/opencv) w/ [dlib](https://github.com/davisking/dlib), with simulated robotics via [gazebo](https://github.com/osrf/gazebo), [rviz](https://github.com/ros-visualization/rviz), [tinkercad](https://www.tinkercad.com), and [ROS packages](https://github.com/ros/ros).  Some functions are purely hypothetical without configuration, so footage of backend simulated robotics is included in their place.  The server can be demoed (without the automated tabbing) with mouse clicks by simply cloning the project and running:
 ```
 $ python app.py
 ```
